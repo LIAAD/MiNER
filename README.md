@@ -3,7 +3,8 @@
 This is the official repository for the submission of the short paper "MiNER: A Two-Stage Pipeline for Metadata Extraction from Municipal Meeting Minutes", for ECIR 2026.
 
 MiNER is a two-stage framework for **automatic metadata extraction** from municipal meeting minutes, combining **Question Answering (QA)** for segment boundary detection and **Named Entity Recognition (NER)** for fine-grained metadata extraction.  
-This repository supports the experiments presented in the accompanying paper, providing all code, data splits. The trained models are available on Hugging Face.
+This repository supports the experiments presented in the accompanying paper and provides the complete codebase used in our experiments.  The full dataset is available at https://github.com/INESCTEC/citilink-dataset, and the trained models are released on Hugging Face.
+
 
 ---
 
@@ -113,12 +114,6 @@ python3 train_qa.py \
   --fp16
 ```
 
-#### Models:
-
-- BERTimbau-Large
-
-- XLM-RoBERTa-Large
-
 ### Named Entity Recognition (NER)
 
 **Goal:** Extract structured metadata entities from minutes.
@@ -126,9 +121,7 @@ python3 train_qa.py \
 #### Convert Metadata → BIO
 
 ```bash
-python3 process_to_bio.py \
-  --input_dir data/dataset_metadata_pt \
-  --output_dir data/metadata_final
+python3 process_new.py
 ```
   
 #### Tokenize & Align Labels
@@ -140,7 +133,7 @@ python3 transform_dataset.py
 #### Train NER Model
 
 ```bash
-python3 model.py
+python3 train_model.py
 ```
 
 
@@ -148,12 +141,12 @@ python3 model.py
 
 ## 7. Dataset Description
 
-### ⚠️ Important Note for Reviewers
+### ⚠️ Important Note
 
 > ⚠️ **Dataset Access Notice:**  
-> The full dataset statistics are presented below; however, **only one municipal meeting minute** is publicly available in this repository due to submission constraints.
+> The full dataset statistics are presented below; however, **only one sample per municipality** is publicly available in this repository. For the full data, please access https://github.com/INESCTEC/citilink-dataset
 
-Two **interactive demos** are provided to allow reviewers to test the models directly:
+Two **interactive demos** are provided to test the models directly:
 
 - 🧩 [Metadata Identification Demo](https://huggingface.co/spaces/anonymous13542/Metadata_Identification_Demo)  
 - ✂️ [Boundary Detection Demo](https://huggingface.co/spaces/anonymous13542/Boundary-Detection-Demo)
@@ -270,7 +263,12 @@ The MiNER framework is composed of two core components — a Question Answering 
 
 ---
 
-## 9. Reporting Issues
+## 9. LLM Experiments
+
+We also conducted a comparison between our trained models and two Large Language Models (LLMs): one open-weight model (Phi) and one closed-weight model (Gemini).  
+The prompt used for these experiments is provided in `assets/prompt_en.txt`.
+
+## 10. Reporting Issues
 
 Please report any issues or bugs through the GitHub repository issue tracker:  
 [**Repository URL**]()
@@ -286,7 +284,7 @@ Providing this information helps ensure faster and more accurate debugging.
 
 ---
 
-## 10. License
+## 11. License
 
 This project is licensed under **CC-BY-ND 4.0 (Creative Commons Attribution–NoDerivatives 4.0 International)**.
 
@@ -308,7 +306,7 @@ Original documents remain the copyright of their respective municipal government
 
 ---
 
-## 11. Resources
+## 12. Resources
 
 ### Models
 
@@ -326,12 +324,11 @@ Pre-trained models fine-tuned within the MiNER framework are available on the **
 
 ---
 
-## 12. Acknowledgments
+## 13. Acknowledgments
 
 - Municipal governments of M1–M6 for providing access to meeting minutes  
 - The **INCEpTION Project** for the annotation platform  
-- **Hugging Face** for hosting models and providing the Transformers library  
-- The **seqeval** project for sequence evaluation metrics  
+- **Hugging Face** for hosting models and providing the Transformers library 
 
 ---
 

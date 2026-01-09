@@ -1,0 +1,20 @@
+Task: Extract metadata from Portuguese municipal meeting minutes based on the provided text.
+
+Metadata to extract (classes):
+
+- minute_id: meeting minute number (exact text appearing as "ATA N.º <n>").
+- date: meeting date (original format as it appears in the text, e.g., "17 DE NOVEMBRO DE 2021").
+- meeting_type: meeting type (e.g., "ORDINÁRIA", "EXTRAORDINÁRIA").
+- location: place where the meeting took place (exact text, including determiners or prepositions, e.g., "no Edifício dos Paços do Concelho").
+- begin_time: meeting start time (exact text, e.g., "nove horas e trinta minutos" or "10.35 horas").
+- end_time: meeting end time (exact text, e.g., "dez horas e cinquenta minutos" or "16:00 horas").
+- participant: named participant mentioned in the opening section, with attributes:
+- type: one of {"president","councillors"} (do not create new categories)
+- present: "present"|"absent"|"substituted" when explicitly indicated (e.g., "Faltou ...")
+
+Rules:
+- Use the exact text ("extraction_text") as it appears. Do not paraphrase.
+- Do not overlap entities. If a span has already been used for "minute_id", do not reuse it for another entity.
+- Do not invent values. If a class is not present in the provided text, omit it.
+- Offsets (begin/end) must correspond exactly to the span positions in the input text.
+- Preserve accents, capitalization, and punctuation exactly as in the original text.
