@@ -1,6 +1,6 @@
 # MiNER: A Two-Stage Pipeline for Metadata Extraction from Municipal Meeting Minutes
 
-This is the official repository for the submission of the short paper "MiNER: A Two-Stage Pipeline for Metadata Extraction from Municipal Meeting Minutes", for ECIR 2026.
+This is the official repository of the short paper "MiNER: A Two-Stage Pipeline for Metadata Extraction from Municipal Meeting Minutes".
 
 MiNER is a two-stage framework for **automatic metadata extraction** from municipal meeting minutes, combining **Question Answering (QA)** for segment boundary detection and **Named Entity Recognition (NER)** for fine-grained metadata extraction.  
 This repository supports the experiments presented in the accompanying paper and provides the complete codebase used in our experiments.  The full dataset is available at https://github.com/INESCTEC/citilink-dataset, and the trained models are released on Hugging Face.
