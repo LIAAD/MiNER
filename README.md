@@ -5,6 +5,11 @@ This is the official repository of the short paper "MiNER: A Two-Stage Pipeline 
 MiNER is a two-stage framework for **automatic metadata extraction** from municipal meeting minutes, combining **Question Answering (QA)** for segment boundary detection and **Named Entity Recognition (NER)** for fine-grained metadata extraction.  
 This repository supports the experiments presented in the accompanying paper and provides the complete codebase used in our experiments.  The full dataset is available at https://github.com/INESCTEC/citilink-dataset, and the trained models are released on Hugging Face.
 
+Two **interactive demos** are provided to test the models directly:
+
+- 🧩 [Metadata Identification Demo](https://huggingface.co/spaces/liaad/Metadata-Identification-Demo)  
+- ✂️ [Boundary Detection Demo](https://huggingface.co/spaces/liaad/Boundary-Detection-Demo)
+
 
 ---
 
@@ -145,11 +150,6 @@ python3 train_model.py
 
 > ⚠️ **Dataset Access Notice:**  
 > The full dataset statistics are presented below; however, **only one sample per municipality** is publicly available in this repository. For the full data, please access https://github.com/INESCTEC/citilink-dataset
-
-Two **interactive demos** are provided to test the models directly:
-
-- 🧩 [Metadata Identification Demo](https://huggingface.co/spaces/anonymous13542/Metadata_Identification_Demo)  
-- ✂️ [Boundary Detection Demo](https://huggingface.co/spaces/anonymous13542/Boundary-Detection-Demo)
 
 ### Overview
 
