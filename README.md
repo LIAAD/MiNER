@@ -312,10 +312,10 @@ Original documents remain the copyright of their respective municipal government
 
 Pre-trained models fine-tuned within the MiNER framework are available on the **Hugging Face Model Hub**:
 
-- [`anonymous13542/BERTimbau-large-metadata-council-pt`](https://huggingface.co/anonymous13542/BERTimbau-large-metadata-council-pt) – Portuguese NER model  
-- [`anonymous13542/XLMR-large-metadata-council-en`](https://huggingface.co/anonymous13542/XLMR-large-metadata-council-en) – English NER model  
-- [`anonymous13542/XLMR-large-qa-council-pt`](https://huggingface.co/anonymous13542/XLMR-large-qa-council-pt) – Portuguese QA model  
-- [`anonymous13542/XLMR-large-qa-council-en`](https://huggingface.co/anonymous13542/XLMR-large-qa-council-en) – English QA model  
+- [`liaad/Citilink-BERTimbau-large-metadata-pt-baseline`](https://huggingface.co/liaad/Citilink-BERTimbau-large-metadata-pt-baseline) – Portuguese NER model  
+- [`liaad/Citilink-XLMR-large-Metadata-en-baseline`](https://huggingface.co/liaad/Citilink-XLMR-large-Metadata-en-baseline) – English NER model  
+- [`liaad/Citilink-XLMR-large-Structural-Segmentation-pt`](https://huggingface.co/liaad/Citilink-XLMR-large-Structural-Segmentation-pt) – Portuguese QA model  
+- [`liaad/Citilink-XLMR-large-Structural-Segmentation-en`](https://huggingface.co/liaad/Citilink-XLMR-large-Structural-Segmentation-en) – English QA model  
 
 ### External Resources
 
