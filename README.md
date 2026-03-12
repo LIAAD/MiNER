@@ -197,8 +197,8 @@ Each file (`dataset_metadata_[lang]/municipality.json`) follows the structure be
 
 The data files for the **Council Metadata Corpus** are located in the `data/` directory:
 
-  -  dataset_metadata_en — Portuguese version (1 files with 1 documents each)
-  -  dataset_metadata_pt — English version (1 files with 1 documents each)
+  -  dataset_metadata_pt — Portuguese version (1 files with 1 documents each)
+  -  dataset_metadata_en — English version (1 files with 1 documents each)
   -  split — Train/val/test split information
 
 
